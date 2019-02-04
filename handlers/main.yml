@@ -1,10 +1,4 @@
 ---
-- name: restart sshd
-  service:
-      name: sshd
-      state: restarted
-  when:
-      - not rhel7stig_system_is_chroot
 
 - name: reboot system
   shell: sleep 3; reboot
